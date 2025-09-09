@@ -10,7 +10,13 @@
         }
 
         /* add CSS code here */
-        
+        .square{
+            border-radius: 0;
+        }
+
+        .circle{
+            border-radius: 50%;
+        }
     </style>
 
     
@@ -29,15 +35,22 @@
        function changeShape(){
         let div1Elem = document.getElementById("div1");
 
+    //     if (square){
+    //         div1Elem.style.borderRadius = "50%";
+    //     }
+    //     else{
+    //         div1Elem.style.borderRadius = "0";
+    //     }
+    //     square =! square;
+    //    }
         if (square){
-            div1Elem.style.borderRadius = "50%";
+            div1Elem.className = "circle";
         }
         else{
-            div1Elem.style.borderRadius = "0";
+            div1Elem.className = "square";
         }
         square =! square;
        }
-        
     </script>
 
 </body>
