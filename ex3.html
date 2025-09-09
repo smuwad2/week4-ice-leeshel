@@ -1,0 +1,42 @@
+<html>
+   <head>
+      <title>Event Handling</title>
+   </head>
+   <body>
+     
+      <h1>Shopping List</h1>
+      <p>Get it done today</p>
+      
+        <!-- add HTML code here -->
+         <input type = "text" id = "newItem">
+         <button id = "btnadd" onclick = "addItem()"> Enter </button>
+
+      <ul>
+         <li>Notebook</li>
+         <li>Jello</li>
+         <li>Spinach</li>
+         <li>Rice</li>
+         <li>Birthday Cake</li>
+         <li>Candles</li>
+      </ul>
+      
+      <script>
+      
+        // add code here
+        
+
+        function addItem(){
+            const itemVal = document.getElementById("newItem").value;
+
+            let liElem = document.createElement("li");
+            liElem.innerText = itemVal;
+
+            const ulElem = document.getElementsByTagName("ul")[0];
+            ulElem.appendChild(liElem);
+
+        }
+
+      </script>
+ 
+   </body>
+</html>
